@@ -3,7 +3,7 @@
  * Given an array, find the average of all contiguous subarrays of size ‘K’ in it.
  */
 
-package datastructures;
+package datastructures.slidingwindowpattern;
 
 import java.util.Arrays;
 
@@ -35,9 +35,9 @@ public class AverageOfSubarrayOfSizeK {
             windowSum += arr[windowEnd];
             if (windowEnd >= K-1) {
                 /*** If we reached the Kth element, add the windowSum value as first element in the result array ***/
-                result[windowStart] += windowSum;
+                result[windowStart] += windowSum/K;
                 /*** Remove the first element and increase the position for windowStart element. ***/
-                windowSum -= windowStart;
+                windowSum -= arr[windowStart];
                 windowStart++;
             }
         }
