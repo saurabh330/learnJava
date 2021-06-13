@@ -22,6 +22,9 @@ import java.util.Map;
  * Explanation: We can put 3 'B' in one basket and two 'C' in the other basket.
  * This can be done if we start with the second letter: ['B', 'C', 'B', 'B', 'C']
  *
+ * Time Complexity: O(N + N) ~ O(N)
+ * Space Complexity: O(N)
+ *
  */
 
 public class MaxFruitCountOf2Types {
